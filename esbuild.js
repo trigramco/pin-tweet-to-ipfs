@@ -7,8 +7,8 @@ import cpy from "cpy";
 import { deleteSync } from "del";
 import esbuild from "esbuild";
 
-import pkg from "./package.json" assert { type: "json" };
-import manifest from "./src/manifest.json" assert { type: "json" };
+import pkg from "./package.json" with { type: "json" };
+import manifest from "./src/manifest.json" with { type: "json" };
 
 // delete old contents of build/ if exists
 deleteSync(["build/**"]);

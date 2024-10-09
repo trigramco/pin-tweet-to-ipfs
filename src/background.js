@@ -51,7 +51,7 @@ function init () {
     title: 'Pin Tweet to IPFS',
     contexts: ['link'],
     id: `pin-tweet-to-ipfs-${new Date().toISOString()}`, // unique id to avoid errors
-    targetUrlPatterns: ['https://twitter.com/*/status/*']
+    targetUrlPatterns: ['https://x.com/*/status/*']
   })
 
   chrome.contextMenus.onClicked.addListener((info) => archiveTweet(info.linkUrl))

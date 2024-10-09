@@ -22,7 +22,7 @@
 
 ## Features
 
-Pin Tweet to IPFS is a [web extension](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions) targetting less-technical users who wish to archive Tweets in a verifiable way. It uses [IPFS](https://ipfs.tech/), [WebRecorder](https://webrecorder.net/), and [web3.storage](https://web3.storage/) to achieve this.
+Pin Tweet to IPFS is a [web extension](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions) targetting less-technical users who wish to archive Tweets (or "Xeets") in a verifiable way. It uses [IPFS](https://ipfs.tech/), [WebRecorder](https://webrecorder.net/), and [web3.storage](https://web3.storage/) to achieve this.
 
 ## How does it work?
 
@@ -49,7 +49,7 @@ Basic functionality can be achieved in a bookmarklet
 
 ```js
 javascript:(function(){
-  const url = document.location.href.match(/https:\/\/twitter.com\/(\w){1,15}\/status\/(\d)*/)[0];
+  const url = document.location.href.match(/https:\/\/x.com\/(\w){1,15}\/status\/(\d)*/)[0];
   if (url) window.open(`https://webrecorder.github.io/save-tweet-now/#url=${url}&autoupload=1`);
 })();
 ```
