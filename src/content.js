@@ -70,7 +70,7 @@ function onMutation (mutations) {
           .filter(
             (node) =>
               node.ariaLabel &&
-              node.ariaLabel.includes('eplies') &&
+              node.ariaLabel.includes('view') &&
               node.id &&
               !found.includes(node)
           )
@@ -80,7 +80,7 @@ function onMutation (mutations) {
           .apply(node.querySelectorAll('[aria-label]'))
           .filter(
             (node) =>
-              node.ariaLabel.includes('eplies') &&
+              node.ariaLabel.includes('view') &&
               node.id &&
               !found.includes(node)
           )
