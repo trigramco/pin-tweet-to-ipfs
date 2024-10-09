@@ -55,6 +55,7 @@ function onMutation (mutations) {
     pinTweetButton.style.minWidth = small ? '' : '165px'
     pinTweetButton.addEventListener('click', (e) => getTweetUrl(e))
     pinTweetButton.id = `pin-tweet-${new Date().toISOString()}`
+    pinTweetButton.title = 'Pin Tweet to IPFS'
     return pinTweetButton
   }
 
