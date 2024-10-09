@@ -49,7 +49,7 @@ Basic functionality can be achieved in a bookmarklet
 
 ```js
 javascript:(function(){
-  const url = document.location.href.match(/https:\/\/twitter.com\/(\w){1,15}\/status\/(\d)*/)[0];
+  const url = document.location.href.match(/https:\/\/x.com\/(\w){1,15}\/status\/(\d)*/)[0];
   if (url) window.open(`https://webrecorder.github.io/save-tweet-now/#url=${url}&autoupload=1`);
 })();
 ```

@@ -12,7 +12,7 @@ function main() {
 
   chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
     const currentTab = tabs[0] // there will be only one in this array
-      const tweetUrlMatch = currentTab.url.match(/https:\/\/twitter.com\/(\w){1,15}\/status\/(\d)*/)
+      const tweetUrlMatch = currentTab.url.match(/https:\/\/(twitter|x).com\/(\w){1,15}\/status\/(\d)*/)
     if (tweetUrlMatch) {
       const url = tweetUrlMatch[0]
       root.render(<Popup />)

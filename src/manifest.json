@@ -17,7 +17,8 @@
   "content_scripts": [
     {
       "matches": [
-        "https://*.twitter.com/*",
+        "https://*.x.com/*",
+        "https://x.com/*",
         "https://webrecorder.github.io/save-tweet-now/"
       ],
       "js": ["content.js"]
