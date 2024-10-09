@@ -67,7 +67,7 @@ function onMutation (mutations) {
           .apply(node.querySelectorAll("[role='group']"))
           .filter(
             (node) =>
-              !node.hasAttribute('aria-label') &&
+              node.ariaLabel.includes('eplies') &&
               node.id &&
               !found.includes(node)
           )
